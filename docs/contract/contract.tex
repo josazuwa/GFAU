@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Contract
+% LaTeX Template
+% Version 1.0 (December 8 2014)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Brandon Fryslie
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Authors:
+% Sabbir Ahmed, Jeffrey Osazuwa, Howard To, Brian Weber
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[paper=usletter, fontsize=12pt]{article}
+\input{structure.tex} % specifies the document layout and style
+
+\newcommand{\team}{Galois Field Arithmetic Unit}
+\newcommand{\Sabbir}{Sabbir Ahmed}
+\newcommand{\Jeffrey}{Jeffrey Osazuwa}
+\newcommand{\Howard}{Howard To}
+\newcommand{\Brian}{Brian Weber}
+
+%----------------------------------------------------------------------------------------
+
+% document info command
+\newcommand{\documentinfo}[5]{
+    \begin{centering}
+        \parbox{6.8in}{
+        \begin{spacing}{1}
+            \begin{flushleft}
+                \begin{tabular}{l l}
+                    #1 \\
+                    #2 \\
+                    #3 \\
+                    #4 \\
+                    #5 \\
+                \end{tabular}\\
+                \rule{\textwidth}{1pt}
+            \end{flushleft}
+        \end{spacing}
+        }
+    \end{centering}
+}
+
+\begin{document}
+
+    \documentinfo{\textbf{MEMO:} GFAU-TC}{\textbf{DATE: }{September 27, 2017}}{\textbf{TO: } EFC LaBerge}{\textbf{FROM: }\Sabbir, \Jeffrey, \Howard, \Brian}{\textbf{SUBJECT: } Team Contract}
+
+    \vspace{-0.3in}
+    \section{Objective}
+
+        This contract serves as a collection of mutual agreements between the members of \team \ in order to successfully complete the project.
+
+    \section{Expectations}
+
+        All members of the team are held to the following basic exceptions:
+
+        \begin{itemize}
+
+            \item Show respect to others, even during times of conflict and disagreements
+            \item Communicate with all members during physical team meetings and in online platforms
+            \item Take responsibility for one’s own actions and behavior
+        \item Complete a fair share of the team's work with acceptable quality
+
+        \end{itemize}
+
+    \section{Team Decisions}
+
+        Leadership is strictly informal with a democratic debate system system used for decision-making. Unanimous voting on team decisions are preferred. In the event where unanimous voting is improbable, team decisions will be made based on the majority vote. In the event where none of the previous voting ratios are improbable, team decisions will be made after consultation with the engineering manager or Dr. LaBerge. 
+
+        Lack of participation from a member will result in exclusion of their inputs regarding team decisions. 
+
+    \section{Work Distribution and Quality}
+    All members of the team should complete a fair share of the team’s work with acceptable quality. In the case of any individual does not meet the team’s standard, the rest of the team will try to assist on improving the skills this individual lacks. If the individual does not demonstrate any improvements after repeatedly support given by the rest of the team, the rest of the team will meet with the engineering manager, Dr. LaBerge to discuss possible actions.     
+
+    \section{Schedule}
+
+        Members of \team \ agree to convene at least twice a week. The meetings may consist of updates on progress or collaborative work. Members are expected to stay updated with milestones and deadlines of the project.
+
+    \section{Absences}
+
+        Absences from team meetings and lack of engagement in group discussions may hinder progress in completing the project. In case of extreme circumstances, team members may be absent from meetings. It is the responsibility of individual team members to notify \textbf{all} members, as soon as possible, when an absence from meetings is necessary. When a member is absent, it is up to the individual to contact members to seek missed information from other members. Failure to notify other members of the team about an unexcused absence will result in lower CATME scores.
+
+    \section{Means of Communication} 
+    An online tool, Slack will be used for communication between team members other than meetings. It is integrated with google calendar to note the upcoming schedule for the team, including all meetings and due dates to ensure the team stays on track.  
+
+    \section{Version Control}
+
+        GitHub will be used for source code version controlling. Individuals are responsible for understanding and following the best practices of version controls. Members are expected to create and develop on their own branches, and merge with the master branch after a thorough review by them team. Feature branching may be implemented with individuals in a “user-feature” naming convention. Forcing pushes or overwriting code are not permitted unless deemed necessary by the team.
+
+    \section{Acceptance}
+
+    By signing below, the members of \team \ agree to abide by the terms and conditions indicated in this document. \\
+
+    \begin{multicols}{2}
+
+        \subsection*{\Sabbir} % Suppress section numbering with the *
+
+        \begin{tabular}{lp{10pt}l}
+            \\ \\
+            \hspace{-0.3cm} \makebox[2.5in]{\hrulefill} \\ \\[3pt]
+        \end{tabular}
+
+        \subsection*{\Jeffrey} % Suppress section numbering with the *
+
+        \begin{tabular}{ l p{10pt} l }
+            \\ \\
+            \hspace{-0.3cm} \makebox[2.5in]{\hrulefill} \\ \\[3pt]
+        \end{tabular}
+
+        \subsection*{\Howard} % Suppress section numbering with the *
+
+        \begin{tabular}{ l p{10pt} l }
+            \\ \\
+            \hspace{-0.3cm} \makebox[2.5in]{\hrulefill} \\ \\[3pt]
+        \end{tabular}
+
+        \subsection*{\Brian} % Suppress section numbering with the *
+
+        \begin{tabular}{ l p{10pt} l }
+            \\ \\
+            \hspace{-0.3cm} \makebox[2.5in]{\hrulefill} \\ \\[3pt]
+        \end{tabular}
+        
+    \end{multicols}
+
+\end{document}

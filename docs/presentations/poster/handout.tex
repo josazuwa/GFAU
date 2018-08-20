@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template LaTeX Template Version 1.0 (December 8 2014)
+%
+% This template has been downloaded from: http://www.LaTeXTemplates.com
+%
+% Original author: Brandon Fryslie With extensive modifications by: Vel
+% (vel@latextemplates.com)
+%
+% License: CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Author: Sabbir Ahmed
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{extarticle}
+% specifies the document layout and style
+\input{../template/structure.tex}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\allowdisplaybreaks
+
+\begin{document}
+
+    \documentinfo
+    {\textbf{MEMO NAME:} GFAU URCAD Handout}
+    {\textbf{SUBJECT: } Analytical Approach to Generating Elements in the Galois Field}
+    {\textbf{DATE: } April 25, 2018 }
+
+\section{Elements}
+
+    Once a polynomial is determined irreducible and primitive, its elements may
+    be generated. The number of elements grow exponentially, $2^{n}-1$, where
+    $n$ is the highest degree of the polynomial. \\ This document will prove
+    the generation of the elements in the polynomial
+    \begin{equation*}
+        GF[x](2^3) = x^3+x^2+x^0
+    \end{equation*}
+    as well as demonstrate sample operations between them.
+
+        \begin{proof}
+
+            Let $\beta \in GF(2^{3})$ be a root of $x^3+x^2+x^0$. That is, $\beta^{3}+\beta^{2}+\beta^{0}=0$\\
+            $\therefore$ The coefficients are in $GF(2) \implies \beta^{3}=\beta^{2}+\beta^{0}$\\
+            Since a field contains the additive and multiplicative identities,
+            \begin{equation*}
+                \{ 0, 1=\beta^{0} \} \in GF(2^{3})
+            \end{equation*}
+            Also, because of closure of multiplication in a field,
+            \begin{equation*}
+                \{\beta^{1}, \beta^{2}, \beta^{3}\} \in GF(2^{3})
+            \end{equation*}
+            But,
+            \begin{equation*}
+                \beta^{3} = \beta^{2} + \beta^{0}
+            \end{equation*}
+            \begin{minipage}[t]{0.5\textwidth}
+                \begin{equation*}
+                    \begin{split}
+                        \because \beta^{4} & = \beta^{1} \times \beta^{3} \\
+                        & = \beta^{1} \times(\beta^{2}+\beta^{0}) \\
+                        & = \beta^{3}+\beta^{1} \\
+                        & = \beta^{2}+\beta^{1}+\beta^{0}
+                    \end{split}
+                \end{equation*}
+            \end{minipage}
+            \begin{minipage}[t]{0.5\textwidth}
+                \begin{equation*}
+                    \begin{split}
+                        \because \beta^{5} & = \beta^{1} \times \beta^{4} \\
+                        & = \beta^{1} \times(\beta^{2}+\beta^{1}+\beta^{0}) \\
+                        & = \beta^{3}+\beta^{2}+\beta^{1} \\
+                        & = \beta^{2}+\beta^{0}+\beta^{2}+\beta^{1} \\
+                        & = \beta^{1}+\beta^{0}
+                    \end{split}
+                \end{equation*}
+            \end{minipage}
+            \begin{minipage}[t]{0.5\textwidth}
+                \begin{equation*}
+                    \begin{split}
+                        \because \beta^{6} & = \beta^{1} \times \beta^{5} \\
+                        & = \beta^{1} \times(\beta^{1}+\beta^{0}) \\
+                        & = \beta^{2}+\beta^{1}
+                    \end{split}
+                \end{equation*}
+            \end{minipage}
+            \begin{minipage}[t]{0.5\textwidth}
+                \begin{equation*}
+                    \begin{split}
+                        \because \beta^{7} & = \beta^{1} \times \beta^{6} \\
+                        & = \beta^{1} \times(\beta^{2}+\beta^{1}) \\
+                        & = \beta^{3}+\beta^{2} \\
+                        & = \beta^{2}+\beta^{0}+\beta^{2} \\
+                        & = \beta^{0} = 1
+                    \end{split}
+                \end{equation*}
+            \end{minipage} \\
+
+            In conclusion, $\{0, \beta^{0}, \beta^{1}, \beta^{2}, \beta^{3}, \beta^{4}, \beta^{5}, \beta^{6}\} \in GF(2^{3})$ \qedhere
+
+        \end{proof}
+
+    \section{Operations} The operations supported by the Galois Field
+    Arithmetic Unit are
+    \begin{enumerate}[label=\textbf{(\alph*)},itemsep=1em]
+        \item Addition / Subtraction (bitwise exclusive disjunction): $\beta^{i} \pm \beta^{j} = \beta^{i} \oplus \beta^{j}$
+        \item Multiplication: $\beta^{i} \times \beta^{j} = \beta^{i+j \Mod{2^n-1}}$
+        \item Division: $\beta^{i} \div \beta^{j} = \beta^{i-j \Mod{2^n-1}}$
+        \item Logarithm: $\log\beta^{i} = i$
+    \end{enumerate}
+
+\end{document}
